@@ -27,6 +27,22 @@ function validate(form) {
   var exp_regular =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   var exp_regular_pass = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
+  
+  if (!form.name.value) {
+    document.getElementById("error_name").innerHTML =
+    "Debe completar el campo de Nombre";
+    return false;
+  } 
+  else {
+    if (form.name.value.length > 50) {
+      document.getElementById("error_name").innerHTML =
+    "El Nombre no puede superar 50 caracteres";
+      return false;
+    }
+  else{ 
+    document.getElementById("error_name").innerHTML = "";}
+}
+  
   //Test para comprobar que el campo email cumpla con la expresion regular
   if (!form.email.value) {
     document.getElementById("error_email").innerHTML =
@@ -101,11 +117,6 @@ function validate(form) {
     document.getElementById("error_terminos").innerHTML = "";
   }
 
-  console.log(
-    form.email.value,
-    form.pass.value,
-    "datos del usuario dentro de VALIDATE"
-  );
 
   //enviamos una alerta personalizada de registro exitoso y bienvenida
   document.getElementById("alerta_bienvenido").innerHTML = alerta(
