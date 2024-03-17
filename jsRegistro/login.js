@@ -17,7 +17,7 @@ function loginUsuario(e) {
 
 	//validaciones aca
 	if (!resultadoValidacion) {
-		console.log('no es un email valido');
+		console.log('Lo siento! no es un mail valido');
 	} //sigan con todas las que faltan
 
 	//una vez pasada las validaciones
@@ -28,8 +28,9 @@ function loginUsuario(e) {
 	if (usuarioVerificado == undefined || usuarioVerificado.password !== password) {
 		Swal.fire({
 			icon: 'error',
-			title: 'Oops...',
+			title: 'Lo siento !',
 			text: 'El Email o contraseña es incorrecto!',
+			confirmButtonColor: 'orange',
 		});
 		return;
 	}
@@ -40,6 +41,7 @@ function loginUsuario(e) {
 		title: 'Usuario Logueado Correctamente',
 		showConfirmButton: false,
 		timer: 1500,
+		confirmButtonColor: 'orange',
 	});
 
 	validarRegistro.reset();

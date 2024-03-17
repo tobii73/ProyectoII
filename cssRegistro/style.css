@@ -61,3 +61,49 @@ audio{
     border-radius: 4px !important;
    
 }
+
+body {
+    background-image: url("https://wallpapercave.com/wp/wp2508260.jpg");
+    background-size: cover; /* Para que la imagen se ajuste al tamaño de la ventana */
+    background-position: center; /* Para centrar la imagen */
+    height: 100vh; /* Para que la imagen ocupe toda la altura de la ventana */
+    color: goldenrod; /* Esto establece el color del texto a blanco para todos los elementos */
+
+    
+  }
+  #btn_continuar {
+    background-color: goldenrod; /* Cambia este color al que desees */
+  }
+  .text-blue {
+    color: goldenrod; /* Cambia este color al que desees */
+  }
+  #btn_inicio_sesion {
+    background-color: goldenrod; /* Cambia este color al que desees */
+  }
+  .form-control {
+    border-radius: 5px; /* Puedes ajustar este valor para redondear más o menos las esquinas */
+  }
+
+  #alerta_bienvenido {
+color: goldenrod; /* Cambia 'blue' al color deseado */
+}
+#error_name {
+color: goldenrod; /* Cambia 'goldenrod' al color deseado */
+
+}
+#error_pass {
+color: goldenrod; /* Cambia 'goldenrod' al color deseado */
+
+}
+#error_mail {
+color: goldenrod; /* Cambia 'goldenrod' al color deseado */
+
+}
+#error_pass_confir {
+color: goldenrod; /* Cambia 'goldenrod' al color deseado */
+
+}
+#error_terminos {
+color: goldenrod; /* Cambia 'goldenrod' al color deseado */
+
+}
