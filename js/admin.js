@@ -2,11 +2,17 @@ const tablaUsuarios = document.querySelector('#tablaUsuarios');
 const validarProducto = document.querySelector('#validarProducto');
 const tablaProducto = document.querySelector('#tablaProducto');
 const formularioEditar = document.querySelector('#formularioEditar');
+const modalEditar = document.getElementById('productoEditar');
+const cerrar = document.getElementById('cerrar');
 const usuariosRegistrados = JSON.parse(localStorage.getItem('usuarios')) || [];
 let productosRegistrados = JSON.parse(localStorage.getItem('productos')) || [];
 validarProducto.addEventListener('submit', crearProducto);
 formularioEditar.addEventListener('submit', editarProducto);
-//creamos el molde para crear un objeto
+cerrar.addEventListener('click', cerrarModal);
+
+
+
+
 class Producto {
 	constructor(id, nombre, precio, descripcion, categoria, stock) {
 		this.id = id;
@@ -18,35 +24,52 @@ class Producto {
 	}
 }
 
+
 function cargarUsuarios() {
-	usuariosRegistrados.map(function (usuario) {
+	usuariosRegistrados.map(function (usuarios) {
 		//creamos una etiqueta tr
 		const tr = document.createElement('tr');
-		//a esa etiqueta TR le implementamos los td con la informacion del usuario que se este iterando
 		tr.innerHTML = `
-        <td>${usuario.id}</td>
-        <td>${usuario.nombre}</td>
-        <td>${usuario.email}</td>
+        <td>${usuarios.id}</td>
+        <td>${usuarios.nombre}</td>
+        <td>${usuarios.email}</td>
         `;
 		//incrustamos en el tbody el tr
 		tablaUsuarios.appendChild(tr);
 	});
 }
 
+
 cargarUsuarios();
+
 
 function crearProducto(e) {
 	e.preventDefault();
 	const id = Date.now();
-	const nombre = document.querySelector('#nombre').value;
-	const precio = document.querySelector('#precio').value;
-	const descripcion = document.querySelector('#descripcion').value;
-    const categoria = document.querySelector('#categoria').value;
-    const stock = document.querySelector('#stock').value;
+	const nombre = document.querySelector('#nombre').value.trim();
+	const precio = document.querySelector('#precio').value.trim();
+	const descripcion = document.querySelector('#descripcion').value.trim();
+    const categoria = document.querySelector('#categoria').value.trim();
+    const stock = document.querySelector('#stock').value.trim();
 
-	//validar campos ACA
-	//ustedes tienen que hacerlo el profe ya se los enseño
+	// validar campos ACA
+	// ustedes tienen que hacerlo el profe ya se los enseño
 
+	const error = document.getElementById('error');
+	if (nombre.length === 0 || precio.length === 0 || descripcion.length === 0 || categoria.length === 0 || stock.length === 0){
+		
+		error.innerHTML = 'todos los campos deben estar completos';
+		setTimeout( () => {
+			error.textContent = '';
+		}, 2000);
+		return false;
+	} else if (precio < 0 || stock < 0){
+		error.innerHTML = 'ingresar un numero positivo';
+		setTimeout( () => {
+			error.textContent = '';
+		}, 2000);
+		return false; 
+	}
 	const newProduct = new Producto(id, nombre, precio, descripcion, categoria, stock);
 	productosRegistrados.push(newProduct);
 
@@ -119,6 +142,10 @@ function modalEditarProducto(id) {
 	
 }
 
+function cerrarModal() {
+	modalEditar.style.display = 'none';
+}
+
 function editarProducto(e) {
 	e.preventDefault();
 	
@@ -129,6 +156,21 @@ function editarProducto(e) {
 	const stockEditar  = document.getElementById('stockEditar').value;
 
 	// validaciones
+	const errorEditar = document.getElementById('errorEditar');
+	if (nombreEditar.length === 0 || precioEditar.length === 0 || descripcionEditar.length === 0 || categoriaEditar.length === 0 || stockEditar.length === 0){
+		
+		errorEditar.innerHTML = 'todos los campos deben estar completos';
+		setTimeout( () => {
+			errorEditar.textContent = '';
+		}, 2000);
+		return false;
+	} else if (precioEditar < 0 || stockEditar < 0){
+		errorEditar.innerHTML = 'ingresar un numero positivo';
+		setTimeout( () => {
+			errorEditar.textContent = '';
+		}, 2000);
+		return false; 
+	}
 
 	const id = formularioEditar.getAttribute('data-id');
 	
