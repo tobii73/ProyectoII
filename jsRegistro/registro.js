@@ -1,9 +1,10 @@
 class Usuario {
-  constructor(id, email, password) {
+  constructor(id, name, email, password, admin) {
     this.id = id;
-    //this.nombre = nombre;
+    this.name = name;
     this.email = email;
     this.password = password;
+    this.admin = admin;
   }
 }
 
@@ -67,7 +68,8 @@ function validate(form) {
         Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: "El Correo ingresado ya esta Registrado!"
+          text: "El Correo ingresado ya esta Registrado!",
+          confirmButtonColor: 'orange',
         });
         return;
       }
@@ -138,16 +140,12 @@ function alerta(texto, tipo) {
 function registrarUsuario(form) {
   //e.preventDefault();
   const id = Date.now();
+  var name = form.name.value;
   var email = form.email.value;
   var pass = form.pass.value;
+  var admin = false;
 
-  //const email = document.querySelector('#email').value;
-  //const pass = document.querySelector('#pass').value;
-
-  // Obtener los valores del formulario utilizando el DOM
-  //console.log(form.email.value, form.pass.value, 'datos del usuario dentro de REGISTRANDO USUARIO');
-
-  const newUser = new Usuario(id, email, pass);
+  const newUser = new Usuario(id, name, email, pass, admin);
   usuariosRegistrados.push(newUser);
 
   localStorage.setItem("usuarios", JSON.stringify(usuariosRegistrados));
