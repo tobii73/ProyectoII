@@ -100,7 +100,7 @@ nav .toggle_btn {
 }
 
 .dropdown_menu.open {
-    height: 240px;
+    height: 200px;
 }
 
 .dropdown_menu li {
@@ -129,20 +129,24 @@ nav .toggle_btn {
     nav .toggle_btn {
         display: block;
     }
-    .dropdown_menu{
+
+    .dropdown_menu {
         display: block;
         z-index: 1;
     }
 }
-@media (max-width: 576px){
-    .dropdown_menu{
+
+@media (max-width: 576px) {
+    .dropdown_menu {
         left: 2rem;
         width: unset;
         z-index: 1;
     }
-    .dropdown_menu.open{
-        height: 250px;
+
+    .dropdown_menu.open {
+        height: 200px;
     }
 }
+
 /* Responsive */
 /* NAV */
