@@ -7,14 +7,8 @@ darkModeToggle.addEventListener('click', () => {
 
 $(document).ready(function () {
 	$('[data-fancybox="gallery"]').fancybox({
-		loop: true, // Permitir la navegación circular entre las imágenes
-		buttons: [
-			// Agregar botones de navegación y cierre
-			'slideShow',
-			'fullScreen',
-			'thumbs',
-			'close',
-		],
+		loop: true,
+		buttons: ['slideShow', 'thumbs', 'close'],
 	});
 });
 
