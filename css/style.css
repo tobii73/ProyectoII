@@ -73,6 +73,10 @@ h6 {
 	color: #212529;
 }
 
+.dark-mode .serv-dark {
+	color: #000000;
+}
+
 .dark-mode .leer-mas {
 	text-decoration: none;
 	color: var(--c-brand);
@@ -84,7 +88,7 @@ h6 {
 }
 
 .dark-mode .service {
-	background-color: #131111;
+	background-color: white;
 }
 
 .dark-mode a {
