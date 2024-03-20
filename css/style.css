@@ -14,6 +14,7 @@ body {
 	font-style: normal;
 	line-height: 1.7;
 	color: var(--c-body);
+	background-color: #ffffff;
 }
 
 h1,
@@ -53,7 +54,7 @@ img {
 }
 
 .dark-mode {
-	background-color: #222;
+	background-color: #212529;
 	color: #fff;
 }
 .dark-mode h1,
@@ -71,6 +72,21 @@ h6 {
 .dark-mode .parrafos-dark {
 	color: #212529;
 }
+
+.dark-mode .leer-mas {
+	text-decoration: none;
+	color: var(--c-brand);
+	transition: var(--transition);
+}
+
+.dark-mode .leer-mas:hover {
+	color: var(--c-brand-light);
+}
+
+.dark-mode .service {
+	background-color: #131111;
+}
+
 .dark-mode a {
 	color: white;
 }
@@ -211,6 +227,7 @@ h6 {
 	position: relative;
 	overflow: hidden;
 	z-index: 2;
+	background-color: #dfdfdf;
 }
 
 .service::after {
@@ -276,36 +293,4 @@ h6 {
 	bottom: -14px;
 	background-color: white;
 	transform: rotate(45deg);
-}
-
-/* Contactanos */
-#contactos {
-	position: relative;
-	z-index: 2;
-}
-
-#contactos::after {
-	content: '';
-	width: 100%;
-	height: 70%;
-	background: linear-gradient(
-			rgba(var(--c-brand-rgb), 0.8),
-			rgba(var(--c-brand-rgb), 0.8)
-		),
-		url(../images/counter.jpg);
-	background-position: center;
-	background-size: cover;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: -1;
-}
-
-#contactos .form-control {
-	border-radius: 0;
-}
-
-#contactos .form-control:focus {
-	box-shadow: none;
-	border-color: var(--c-brand);
 }
