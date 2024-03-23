@@ -44,6 +44,72 @@ a {
 	transition: var(--transition);
 }
 
+.nombre {
+	background: transparent;
+	vertical-align: baseline;
+	text-align: center;
+	font-size: 65px;
+	font-family: 'Rasa', serif;
+	font-optical-sizing: auto;
+	font-weight: weight;
+	font-style: normal;
+}
+
+.inputBuscar {
+	outline: none;
+	box-sizing: border-box;
+	height: 50px;
+	width: 0;
+	padding: 0px 30px;
+	color: #000000;
+	border-radius: 50px;
+	font-size: 20px;
+	border: 1px solid #6970dd;
+	transition: all 0.7s ease;
+}
+
+.container-busqueda {
+	position: absolute;
+	left: 50%;
+	top: 69%;
+	transform: translate(-50%, -50%);
+}
+
+.btn-busqueda {
+	position: absolute;
+	right: 0;
+	top: -9px;
+	width: 65px;
+	height: 65px;
+	background-color: var(--c-brand);
+	border-color: var(--c-brand);
+	line-height: 80px;
+	border-radius: 50%;
+	text-align: center;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.btn-busqueda .lupa {
+	font-size: 25px;
+	color: white;
+	line-height: 50px;
+	transition: all 0.7s ease;
+}
+
+.container-busqueda:hover .inputBuscar {
+	width: 350px;
+}
+
+.container-busqueda:hover .lupa {
+	transform: rotate(-360deg);
+}
+
+.btn-busqueda:hover {
+	background-color: var(--c-brand-light);
+	border-color: var(--c-brand-light);
+}
+
 a:hover {
 	color: var(--c-brand-light);
 }
