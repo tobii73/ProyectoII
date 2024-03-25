@@ -42,9 +42,9 @@ function cargarUsuarios() {
         <td>${usuario.id}</td>
         <td>${usuario.name}</td>
         <td>${usuario.email}</td>
-		<td>
-			<button class="btn btn-success mx-3" onclick="validar(${usuario.id})">Validar</button>
-			<button class="btn btn-secondary" onclick="invalidar(${usuario.id})">Invalidar</button>
+		<td class="text-center">
+			<button class="boton boton1 btn btn-success mx-3 my-3" onclick="validar(${usuario.id})">Validar</button>
+			<button class="boton boton2 btn btn-secondary deshabilitar" onclick="invalidar(${usuario.id})">Invalidar</button>
 		</td>
         `;
 		//incrustamos en el tbody el tr
@@ -66,6 +66,16 @@ function validar(id) {
 		}
 	});
 
+	const botones = document.querySelectorAll('.boton');
+
+	function habilitarBoton2 () {
+		botones.forEach(boton => {
+		  boton.classList.remove('deshabilitado');
+		});
+		document.querySelector('.boton1').classList.add('deshabilitado');
+	  }
+
+	  habilitarBoton2();
 	
 }
 
@@ -77,6 +87,17 @@ function invalidar(id) {
 			
 		}
 	});
+
+	const botones = document.querySelectorAll('.boton');
+
+	function habilitarBoton1() {
+		botones.forEach(boton => {
+		  boton.classList.remove('deshabilitado');
+		});
+		document.querySelector('.boton2').classList.add('deshabilitado');
+	  }
+
+	habilitarBoton1();
 }
 
 
@@ -223,5 +244,4 @@ function editarProducto(e) {
 		cargarProductos();
 		localStorage.setItem('productos' , JSON.stringify(productosRegistrados));
 }
-
 

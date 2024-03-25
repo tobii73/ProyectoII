@@ -14,6 +14,7 @@ body {
 
 .tituloTabla {
   background-color: #212529;
+  width: 100%;
 }
 
 
@@ -28,4 +29,9 @@ body {
 
 .botonProducto:hover {
   background-color: rgb(151, 116, 27)
+}
+
+.deshabilitado {
+  pointer-events: none;
+  opacity: 0.5;
 }

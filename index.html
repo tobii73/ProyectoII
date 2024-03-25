@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/styleNav.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Rasa:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+		/>
+	</head>
+	<body>
+		<section id="portada" class="min-vh-100 d-flex align-items-center text-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h1 class=" text-white pt-4 mt-4  nombre">
+							BIENVENIDO A TREKKING BAGS
+						</h1>
+					<div class="container-busqueda">
+						<input type="text"  id="inputBuscar" placeholder="Buscar" class="inputBuscar">
+						<div class="btn-busqueda">
+							<i class="ri-search-line lupa"></i>
+						</div>
+					</div>			
+						<div>
+							<a href="#productos" class="btn btn-brand ms-2 mt-2">Algunos Productos</a>
+							<button id="dark-mode-toggle" class="btn btn-brand ms-2 mt-2">
+								Modo oscuro
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="card-group image-zoom">
+				<div class="card border-0 image-zoom-wrapper position-relative">
+					<a href="/pages/mochilasCas.html">
+					<img
+						src="img/Mochilas casuales.png"
+						class="card-img-top"
+						alt="mochilas casuales"
+					/>
+					<div class="card-body position-absolute top-50 start-50 translate-middle">
+						<h5 class="card-text">
+							<small>Mochilas casuales</small>
+						</h5>
+					</div>
+				</a>
+				</div>
+				<div class="card border-0 image-zoom-wrapper position-relative">
+					<a href="/pages/bolsos.html">
+						<img src="img/Bolsos.png" class="card-img-top" alt="mochilas casuales" />
+						<div
+							class="card-body position-absolute top-50 start-50 translate-middle"
+						>
+							<h5 class="card-text">
+								<small>Bolsos</small>
+							</h5>
+						</div>
+					</a>
+				</div>
+				<div class="card border-0 image-zoom-wrapper position-relative">
+					<a href="/pages/mochilaTrekking.html">
+					<img
+						src="img/Mochilas de trekking.png"
+						class="card-img-top"
+						alt="mochilas casuales"
+					/>
+					<div class="card-body position-absolute top-50 start-50 translate-middle">
+						<h5 class="card-text">
+							<small>Mochilas de trekking</small>
+						</h5>
+					</div>
+				</div>
+			</a>
+			</div>
+		</section>
+		<section id="about" class="section-padding">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<div class="section-titulo">
+							<h1 class="display-4 fw-semibold">Sobre nosotros</h1>
+							<div class="line"></div>
+							<p>
+								Somos una empresa especializada en la venta de mochilas y bolsos de
+								la mas alta calidad y variedad
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="row justify-content-between align-items-center">
+					<div class="col-lg-6 mb-3">
+						<img src="img/mochilas 3.jpg" alt="mochilas" />
+					</div>
+					<div class="col-lg-5 mt-2">
+						<h1>En que nos destacamos</h1>
+						<p class="mt-3 mb-4">
+							Nuestro principal objetivo es siempre poder brindar el mejor servicio y
+							atención a nuestros clientes
+						</p>
+						<div class="d-flex pt-4 mb-3">
+							<div class="iconbox me-4">
+								<i class="ri-mail-send-fill"></i>
+							</div>
+							<div>
+								<h5 class="texto texto1">Rapidez de la entrega</h5>
+								<p>
+									Nos enfocamos en que tu pedido llegue en la fecha que lo pediste!
+								</p>
+							</div>
+						</div>
+						<div class="d-flex mb-3">
+							<div class="iconbox me-4">
+								<i class="ri-award-fill"></i>
+							</div>
+							<div>
+								<h5 class="texto texto1">Calidad asegurada</h5>
+								<p>
+									Utilizamos los mejores materiales, para lograr dar a nuestros
+									clientes un producto de calidad
+								</p>
+							</div>
+						</div>
+						<div class="d-flex">
+							<div class="iconbox me-4">
+								<i class="ri-message-3-fill"></i>
+							</div>
+							<div>
+								<h5 class="texto texto1">Siempre te escuchamos</h5>
+								<p>
+									Ante cualquier duda o problema, nuestro equipo de atención al
+									cliente te brinda una solucion util y veloz
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="services" class="section-padding border-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<div class="section-titulo">
+							<h1 class="display-4 fw-semibold">Nuestros servicios</h1>
+							<div class="line"></div>
+							<p>
+								Nos dedicamos a cumplir cualquier idea que se te ocurra, por lo cual
+								te bridamos nuestro abanico de servicios
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="row g-4 text-center">
+					<div class="col-lg-4 col-sm-6">
+						<div class="service theme-shadow p-lg-5 p-4">
+							<div class="iconbox">
+								<i class="ri-palette-fill"></i>
+							</div>
+							<h5 class="mt-4 mb-3 texto serv-dark">Personalización</h5>
+							<p class="serv-dark">
+								Puedes elegir colores, tamaños y diseños especificos, para asi armar
+								tu producto ideal
+							</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-6">
+						<div class="service theme-shadow p-lg-5 p-4">
+							<div class="iconbox">
+								<i class="ri-price-tag-3-fill"></i>
+							</div>
+							<h5 class="mt-4 mb-3 texto serv-dark">Ofertas semanales</h5>
+							<p class="serv-dark">
+								Cada semana te ofrecemos numerosos descuentos de nuestros productos
+							</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-6">
+						<div class="service theme-shadow p-lg-5 p-4">
+							<div class="iconbox">
+								<i class="ri-vip-diamond-fill"></i>
+							</div>
+							<h5 class="mt-4 mb-3 texto serv-dark">Suscripción VIP</h5>
+							<p class="serv-dark">
+								Brindamos esta opción para que nuestros clientes tengan promociones
+								especiales
+							</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-6">
+						<div class="service theme-shadow p-lg-5 p-4">
+							<div class="iconbox">
+								<i class="ri-swap-fill"></i>
+							</div>
+							<h5 class="mt-4 mb-3 texto serv-dark">Devoluciones</h5>
+							<p class="serv-dark">
+								Si te equivocaste o no te gusto tu compra, poder hacer el reembolso
+								dentro de las 48hrs
+							</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-6">
+						<div class="service theme-shadow p-lg-5 p-4">
+							<div class="iconbox">
+								<i class="ri-gift-fill"></i>
+							</div>
+							<h5 class="mt-4 mb-3 texto serv-dark">Regalos especiales</h5>
+							<p class="serv-dark">
+								Si quieres tener un buen gesto con esa persona, te ayudamos con la
+								mejor presentación
+							</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-6">
+						<div class="service theme-shadow p-lg-5 p-4">
+							<div class="iconbox">
+								<i class="ri-user-2-fill"></i>
+							</div>
+							<h5 class="mt-4 mb-3 texto serv-dark">Atención al cliente</h5>
+							<p class="serv-dark">
+								Nuestro equipo esta pendiente las 24hrs del dia ante cualquier
+								consulta que tengas
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="productos" class="section-padding">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<div class="section-titulo">
+							<h1 class="display-4 fw-semibold">Algunos de nuestros productos</h1>
+							<div class="line"></div>
+							<p>
+								Tratamos de que siempre nuestros clientes consigan la mejor opción
+								para ellos, aqui te presentamos algunos modelos
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="row g-4">
+					<div class="col-md-4">
+						<div class="portfolio-item image-zoom">
+							<div class="image-zoom-wrapper">
+								<img src="img/Bolso 1.webp" alt="producto" />
+							</div>
+							<a href="img/Bolso 1.webp" data-fancybox="gallery" class="iconbox"
+								><i class="ri-search-2-line"></i
+							></a>
+						</div>
+						<div class="portfolio-item image-zoom mt-4">
+							<div class="image-zoom-wrapper">
+								<img src="img/mochi 4.jpg" alt="producto" />
+							</div>
+							<a href="img/mochi 4.jpg" data-fancybox="gallery" class="iconbox"
+								><i class="ri-search-2-line"></i
+							></a>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="portfolio-item image-zoom">
+							<div class="image-zoom-wrapper">
+								<img src="img/bolso 2.jpg" alt="producto" />
+							</div>
+							<a href="img/bolso 2.jpg" data-fancybox="gallery" class="iconbox"
+								><i class="ri-search-2-line"></i
+							></a>
+						</div>
+						<div class="portfolio-item image-zoom mt-4">
+							<div class="image-zoom-wrapper">
+								<img src="img/bolso3.jpg" alt="producto" />
+							</div>
+							<a href="img/bolso3.jpg" data-fancybox="gallery" class="iconbox"
+								><i class="ri-search-2-line"></i
+							></a>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="portfolio-item image-zoom">
+							<div class="image-zoom-wrapper">
+								<img src="img/mochi 1.jpg" alt="producto" />
+							</div>
+							<a href="img/mochi 1.jpg" data-fancybox="gallery" class="iconbox"
+								><i class="ri-search-2-line"></i
+							></a>
+						</div>
+						<div class="portfolio-item image-zoom mt-4">
+							<div class="image-zoom-wrapper">
+								<img src="img/mochilaejemplo.jpg" alt="producto" />
+							</div>
+							<a href="img/mochilaejemplo.jpg" data-fancybox="gallery" class="iconbox"
+								><i class="ri-search-2-line"></i
+							></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="reseñas" class="section-padding">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<div class="section-titulo">
+							<h1 class="display-4 fw-semibold">Algunas reseñas</h1>
+							<div class="line"></div>
+							<p>
+								Como parte de nuestra transparecncia con nustros clientes, te
+								mostramos las opiniones variadas sobre nuestros servicios
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="row gy-5 gx-4">
+					<div class="col-lg-4 col-sm-6">
+						<div class="reseñas">
+							<div class="reseñas-head p-4 bg-white theme-shadow">
+								<div class="text-warning">
+									<i class="ri-star-fill"></i>
+									<i class="ri-star-fill"></i>
+									<i class="ri-star-fill"></i>
+									<i class="ri-star-fill"></i>
+									<i class="ri-star-fill"></i>
+								</div>
+								<p class="parrafos-dark">
+									"¡Compra genial! Mi mochila llegó en perfecto estado y muy rápido.
+									Excelente calidad y servicio al cliente. Volveré seguro."
+								</p>
+							</div>
+							<div class="mt-4 d-flex align-items-center">
+								<i class="ri-user-fill"></i>
+								<div class="ms-3">
+									<h5 class="texto texto1">Gonzalo M.</h5>
+									<small>Profesor</small>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-6">
+						<div class="reseñas">
+							<div class="reseñas-head p-4 bg-white theme-shadow">
+								<div class="text-warning">
+									<i class="ri-star-fill"></i>
+									<i class="ri-star-fill"></i>
+									<i class="ri-star-fill"></i>
+									<i class="ri-star-fill"></i>
+									<i class="ri-star-fill"></i>
+								</div>
+								<p class="parrafos-dark">
+									"Mochila resistente y cómoda. El proceso de pedido fue fácil y la
+									entrega rápida. ¡Muy contento con mi compra!"
+								</p>
+							</div>
+							<div class="mt-4 d-flex align-items-center">
+								<i class="ri-user-fill"></i>
+								<div class="ms-3">
+									<h5 class="texto texto1">Matias V.</h5>
+									<small>Estudiante</small>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-6">
+						<div class="reseñas">
+							<div class="reseñas-head p-4 bg-white theme-shadow">
+								<div class="text-warning">
+									<i class="ri-star-fill"></i>
+									<i class="ri-star-fill"></i>
+								</div>
+								<p class="parrafos-dark">
+									"El bolso que recibí no era exactamente del color que esperaba
+									según la imagen en línea. Fue un poco decepcionante."
+								</p>
+							</div>
+							<div class="mt-4 d-flex align-items-center">
+								<i class="ri-user-fill"></i>
+								<div class="ms-3">
+									<h5 class="texto texto1">Ignacio J.</h5>
+									<small>Abogado</small>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-6">
+						<div class="reseñas">
+							<div class="reseñas-head p-4 bg-white theme-shadow">
+								<div class="text-warning">
+									<i class="ri-star-fill"></i>
+									<i class="ri-star-fill"></i>
+									<i class="ri-star-fill"></i>
+									<i class="ri-star-fill"></i>
+									<i class="ri-star-fill"></i>
+								</div>
+								<p class="parrafos-dark">
+									"La mochila que pedí es exactamente lo que necesitaba e inclusa
+									más. ¡Feliz con mi compra y el servicio de atención al cliente!"
+								</p>
+							</div>
+							<div class="mt-4 d-flex align-items-center">
+								<i class="ri-user-fill"></i>
+								<div class="ms-3">
+									<h5 class="texto texto1">Ximena M.</h5>
+									<small>Estuadiante</small>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-6">
+						<div class="reseñas">
+							<div class="reseñas-head p-4 bg-white theme-shadow">
+								<div class="text-warning">
+									<i class="ri-star-fill"></i>
+									<i class="ri-star-fill"></i>
+									<i class="ri-star-fill"></i>
+									<i class="ri-star-fill"></i>
+								</div>
+								<p class="parrafos-dark">
+									"Bolso de alta calidad y entrega rápida. ¡Muy feliz con mi compra,
+									le recomiendo el producto a todos! Gracias."
+								</p>
+							</div>
+							<div class="mt-4 d-flex align-items-center">
+								<i class="ri-user-fill"></i>
+								<div class="ms-3">
+									<h5 class="texto texto1">Julieta N.</h5>
+									<small>Vendedora</small>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-6">
+						<div class="reseñas">
+							<div class="reseñas-head p-4 bg-white theme-shadow">
+								<div class="text-warning">
+									<i class="ri-star-fill"></i>
+									<i class="ri-star-fill"></i>
+									<i class="ri-star-fill"></i>
+									<i class="ri-star-fill"></i>
+									<i class="ri-star-fill"></i>
+								</div>
+								<p class="parrafos-dark">
+									"Gran experiencia de compra y atención al cliente. Buen precio y
+									envío rápido. Recomiendo este ecommerce a todos.
+								</p>
+							</div>
+							<div class="mt-4 d-flex align-items-center">
+								<i class="ri-user-fill"></i>
+								<div class="ms-3">
+									<h5 class="texto texto1">Samuel B.</h5>
+									<small>Programador</small>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section-padding" id="contactos">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<div class="section-titulo">
+							<h1 class="display-4 fw-semibold">Contactanos ante cualquier duda</h1>
+							<div class="line"></div>
+							<p>Consultanos ante cualquier inquietud o problema que tengas</p>
+						</div>
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-lg-8">
+						<form action="#" class="row g-3 p-lg-5 p-4 bg-white theme-shadow">
+							<div class="form-group col-lg-12">
+								<input
+									type="text"
+									class="form-control"
+									placeholder="Nombre completo"
+								/>
+							</div>
+							<div class="form-group col-lg-12">
+								<input
+									type="email"
+									class="form-control"
+									placeholder="Correo electronico"
+								/>
+							</div>
+							<div class="form-group col-lg-12">
+								<textarea
+									name="message"
+									rows="5"
+									class="form-control"
+									placeholder="Escribe tu mensaje"
+								></textarea>
+							</div>
+							<div class="form-group col-lg-12 d-grid">
+								<button class="btn btn-brand">Enviar mensaje</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-padding">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<div class="section-titulo">
+							<h1 class="display-4 fw-semibold">
+								Noticias recientes y lanzamientos
+							</h1>
+							<div class="line"></div>
+							<p>
+								Nos concentramos en mejorar dia a dia, aquí te dejamos las ultimas
+								noticas sobre nuestro servicios
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="image-zoom">
+							<div class="image-zoom-wrapper">
+								<img src="img/arg.jpg" alt="Noticias" />
+							</div>
+							<h5 class="mt-4 texto texto1">
+								Nuevas surcusales en provincias de Argentina
+							</h5>
+							<p>
+								Nos complace anunciarte nuestra apertura de locales en las provincias
+								de Buenos Aires y Tucumán
+							</p>
+							<a href="./pages/error404.html" class="leer-mas">Leer más</a>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="image-zoom">
+							<div class="image-zoom-wrapper">
+								<img src="img/arg2.jpg" alt="Noticias" />
+							</div>
+							<h5 class="mt-4 texto texto1">
+								Nuevos sorteos en nuestras redes sociales
+							</h5>
+							<p>
+								Recuerdas seguirnos en nuestras cuentas de instagram y facebook, asi
+								participas en nuestros sorteos mensuales
+							</p>
+							<a href="./pages/error404.html" class="leer-mas">Leer más</a>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="image-zoom">
+							<div class="image-zoom-wrapper">
+								<img src="img/modelo.jpg" alt="Noticias" />
+							</div>
+							<h5 class="mt-4 texto texto1">
+								En breve nuevos lanzamientos de bolsos de mano
+							</h5>
+							<p>
+								Escuchamos los consejos de nuestros clientes y nos complace
+								anunciarte nuestro nueva linea de bolsos de mano
+							</p>
+							<a href="./pages/error404.html" class="leer-mas">Leer más</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+        <footer>
+			<div class="redes">
+				<ul>
+					<li class="listaFooter">
+						<i class="fa-brands fa-facebook-f"></i>
+						<a href="https://www.facebook.com/" target="_blank">Facebook</a>
+					</li>
+					<li class="listaFooter">
+						<i class="fa-brands fa-instagram"></i>
+						<a href="https://www.instagram.com/" target="_blank">Instagram</a>
+					</li>
+					<li class="listaFooter">
+						<i class="fa-brands fa-x-twitter"></i>
+						<a href="https://twitter.com/" target="_blank">Twitter</a>
+					</li>
+				</ul>
+			</div>
+			<div class="logo-footer">
+				<a href="">Pruebas</a>
+			</div>
+			<div class="copy-footer">
+				<p>Copyright © 2024 Trekking bags - Todos los derechos reservados</p>
+				<div class="contenedor-cosas">
+					<a href="./pages/acerca-de-nosotros.html">Acerca de nosotros</a>
+					<a href="./pages/error404.html">Contactanos</a>
+				</div>
+			</div>
+		</footer>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+			crossorigin="anonymous"
+		></script>
+		<script src="/js/main.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+	</body>
+</html>

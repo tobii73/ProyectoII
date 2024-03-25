@@ -2,7 +2,7 @@
 const toggle_Btn = document.querySelector('.toggle_btn');
 const toggle_BtnIcon = document.querySelector('.toggle_btn i');
 const dropDownMenu = document.querySelector('.dropdown_menu');
-let usuariosRegistrados = JSON.parse(localStorage.getItem('usuarios')) || [];
+
 
 //Evento para el boton
 toggle_Btn.addEventListener('click', bajar);

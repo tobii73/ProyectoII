@@ -46,10 +46,12 @@
 			</div>
 			<!-- Lista de botones -->
 			<ul class="links">
-				<li><a href="#"> Administrador</a></li>
-				<li><a href="#"> Inicio </a></li>
-				<li><a href="../pages/registro.html"> Registrate</a></li>
-				<li><a href="#"> Iniciar Sesion</a></li>
+				<ul class="links">
+					<li><a href="./login.html"> Administrador</a></li>
+					<li><a href="/"> Inicio </a></li>
+					<li><a href="./registro.html"> Registrate</a></li>
+					<li><a href="./login.html"> Iniciar Sesion</a></li>
+				</ul>
 			</ul>
 			<!-- Boton para responsive -->
 			<div class="toggle_btn">
@@ -58,10 +60,10 @@
 		</nav>
 		<!-- Lista que aparece al hacer responsive la pagina -->
 		<div class="dropdown_menu">
-			<li><a href="#">Inicio</a></li>
-			<li><a href="#">Iniciar Sesion</a></li>
-			<li><a href="#">Registrate</a></li>
-			<li><a >Administrador</a></li>
+			<li><a href="/">Inicio</a></li>
+			<li><a href="./login.html">Iniciar Sesion</a></li>
+			<li><a href="./registro.html">Registrate</a></li>
+			<li><a href="#">Administrador</a></li>
 		</div>
 	</header>
 	<main>
@@ -90,19 +92,20 @@
 
 				<!-- tabla de usuarios -->
 				<h2 class="text-center mt-3 mb-0 p-2 tituloTabla">Lista de usuarios</h2>
-				<table class="table table-dark">
-					<thead>
-						<tr >
-							<th scope="col">ID</th>
-							<th scope="col">Nombre</th>
-							<th scope="col" colspan="2">Email</th>
-						</tr>
-					</thead>
-					<tbody id="tablaUsuarios">
-
-					</tbody>
-				</table>
-
+				<div class="table-responsive">
+					<table class="table table-dark tabla-sm">
+						<thead>
+							<tr >
+								<th scope="col">ID</th>
+								<th scope="col">Nombre</th>
+								<th scope="col" colspan="2">Email</th>
+							</tr>
+						</thead>
+						<tbody id="tablaUsuarios">
+	
+						</tbody>
+					</table>
+				</div>
 
 				<button
 					type="button"
@@ -180,21 +183,23 @@
 
 				<!-- tabla de productos -->
 				<h2 class="text-center mt-3 mb-0 p-2 tituloTabla">Lista de productos</h2>
-				<table class="table table-dark tablaAdmin">
-					<thead>
-						<tr>
-							<th scope="col">ID</th>
-							<th scope="col">Nombre</th>
-							<th scope="col">precio</th>
-							<th scope="col">Descripcion</th>
-							<th scope="col">Categoria</th>
-							<th scope="col" colspan="2">Stock</th>
-						</tr>
-					</thead>
-					<tbody id="tablaProducto">
-
-					</tbody>
-				</table>
+				<div class="table-responsive">
+					<table class="table table-dark tablaAdmin">
+						<thead>
+							<tr>
+								<th scope="col">ID</th>
+								<th scope="col">Nombre</th>
+								<th scope="col">precio</th>
+								<th scope="col">Descripcion</th>
+								<th scope="col">Categoria</th>
+								<th scope="col" colspan="2">Stock</th>
+							</tr>
+						</thead>
+						<tbody id="tablaProducto">
+	
+						</tbody>
+					</table>
+				</div>
 
 				<!-- Modal editar productos -->
 				<div class="modal" tabindex="-1" id="productoEditar">
@@ -276,8 +281,8 @@
 			<div class="copy-footer">
 				<p>Copyright © 2024 Trekking bags - Todos los derechos reservados</p>
 				<div class="contenedor-cosas">
-					<a href="">Acerca de nosotros</a>
-					<a href="">Contactanos</a>
+					<a href="./acerca-de-nosotros.html">Acerca de nosotros</a>
+					<a href="./error404.html">Contactanos</a>
 				</div>
 			</div>
 		</footer>
@@ -286,3 +291,4 @@
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	</body>
 </html>
+
