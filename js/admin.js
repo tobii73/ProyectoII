@@ -4,13 +4,22 @@ const tablaProducto = document.querySelector('#tablaProducto');
 const formularioEditar = document.querySelector('#formularioEditar');
 const modalEditar = document.getElementById('productoEditar');
 const cerrar = document.getElementById('cerrar');
-const usuariosRegistrados = JSON.parse(localStorage.getItem('usuarios')) || [];
+const precio = document.getElementById('precio');
+let usuariosRegistrados = JSON.parse(localStorage.getItem('usuarios')) || [];
 let productosRegistrados = JSON.parse(localStorage.getItem('productos')) || [];
 validarProducto.addEventListener('submit', crearProducto);
 formularioEditar.addEventListener('submit', editarProducto);
 cerrar.addEventListener('click', cerrarModal);
 
 
+cargarProductos();
+
+
+function limitarCaracteres(input) {
+    if (input.value.length > input.maxLength) {
+        input.value = input.value.slice(0, input.maxLength);
+    }
+}
 
 
 class Producto {
@@ -26,21 +35,50 @@ class Producto {
 
 
 function cargarUsuarios() {
-	usuariosRegistrados.map(function (usuarios) {
+	usuariosRegistrados.map(function(usuario) {
 		//creamos una etiqueta tr
-		const tr = document.createElement('tr');
+		const tr = document.createElement('tr'); 
 		tr.innerHTML = `
-        <td>${usuarios.id}</td>
-        <td>${usuarios.nombre}</td>
-        <td>${usuarios.email}</td>
+        <td>${usuario.id}</td>
+        <td>${usuario.name}</td>
+        <td>${usuario.email}</td>
+		<td>
+			<button class="btn btn-success mx-3" onclick="validar(${usuario.id})">Validar</button>
+			<button class="btn btn-secondary" onclick="invalidar(${usuario.id})">Invalidar</button>
+		</td>
         `;
 		//incrustamos en el tbody el tr
 		tablaUsuarios.appendChild(tr);
 	});
+	
 }
 
-
 cargarUsuarios();
+
+function validar(id) {
+	
+
+	usuariosRegistrados = usuariosRegistrados.filter(function(usuario){
+		if (usuario.id === id) {	
+			usuario.admin = true;
+			localStorage.setItem('usuarios' , JSON.stringify(usuariosRegistrados));
+			
+		}
+	});
+
+	
+}
+
+function invalidar(id) {
+	usuariosRegistrados = usuariosRegistrados.filter(function(usuario){
+		if (usuario.id === id) {	
+			usuario.admin = false;
+			localStorage.setItem('usuarios' , JSON.stringify(usuariosRegistrados));
+			
+		}
+	});
+}
+
 
 
 function crearProducto(e) {
@@ -51,9 +89,6 @@ function crearProducto(e) {
 	const descripcion = document.querySelector('#descripcion').value.trim();
     const categoria = document.querySelector('#categoria').value.trim();
     const stock = document.querySelector('#stock').value.trim();
-
-	// validar campos ACA
-	// ustedes tienen que hacerlo el profe ya se los enseño
 
 	const error = document.getElementById('error');
 	if (nombre.length === 0 || precio.length === 0 || descripcion.length === 0 || categoria.length === 0 || stock.length === 0){
@@ -100,8 +135,8 @@ function cargarProductos() {
         <td>${producto.descripcion}</td>
         <td>${producto.categoria}</td>
         <td>${producto.stock}</td>
-        <td>
-            <button class="btn btn-primary" onclick="modalEditarProducto(${producto.id})">Editar</button>
+        <td class="text-center">
+            <button class="btn btn-primary mx-3 my-3" onclick="modalEditarProducto(${producto.id})">Editar</button>
             <button class="btn btn-danger" onclick="borrarProducto(${producto.id})">Eliminar</button>
         </td>
         `;
@@ -110,7 +145,7 @@ function cargarProductos() {
 	});
 }
 
-cargarProductos();
+
 
 function borrarProducto(id) {
 	productosRegistrados = productosRegistrados.filter( function(producto){
@@ -188,6 +223,5 @@ function editarProducto(e) {
 		cargarProductos();
 		localStorage.setItem('productos' , JSON.stringify(productosRegistrados));
 }
-
 
 

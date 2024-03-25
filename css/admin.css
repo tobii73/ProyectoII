@@ -1,0 +1,31 @@
+body {
+    box-sizing: border-box;
+    background-image: url("https://wallpapercave.com/wp/wp2508260.jpg");
+    background-size: cover; 
+    background-position: center;
+    height: 100vh;
+    color: goldenrod; 
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+
+.tituloTabla {
+  background-color: #212529;
+}
+
+
+.tablaAdmin {
+  margin-bottom: 2em;
+}
+
+.botonProducto {
+  background-color: goldenrod !important;
+  color: aliceblue;
+}
+
+.botonProducto:hover {
+  background-color: rgb(151, 116, 27)
+}
