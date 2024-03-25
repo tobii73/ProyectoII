@@ -9,7 +9,14 @@
     />
     <!-- CSS A DONDE ESTA ESA CARPETA ????-->
     <link rel="stylesheet" href="../cssRegistro/style.css">
-    <link rel="stylesheet" type="text/css" href="../cssRegistro/style.css">
+    <link rel="stylesheet" href="../css/styleNav.css">
+    <!-- <link rel="stylesheet" type="text/css" href="cssRegistro/style.css"> -->
+    <!-- ICONOS  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,12 +29,40 @@
 			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 			crossorigin="anonymous"
 		/>
-    <link rel="stylesheet" href="../cssRegistro/style.css">
+    <!-- <link rel="stylesheet" href="./cssRegistro/style.css"> -->
     <title>Mochilas y Carteras</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-dark border rounded navbar-light">
-    <button
+    <header>
+      <!-- Nav -->
+      <nav>
+        <!-- Logo -->
+        <div class="logo">
+          <a href="#">Logo</a>
+        </div>
+        <!-- Lista de botones -->
+        <ul class="links">
+          <ul class="links">
+            <li><a href="./login.html"> Administrador</a></li>
+            <li><a href="/"> Inicio </a></li>
+            <li><a href="./registro.html"> Registrate</a></li>
+            <li><a href="./login.html"> Iniciar Sesion</a></li>
+          </ul>
+        </ul>
+        <!-- Boton para responsive -->
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+      <!-- Lista que aparece al hacer responsive la pagina -->
+      <div class="dropdown_menu">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="./login.html">Iniciar Sesion</a></li>
+        <li><a href="#">Registrate</a></li>
+        <li><a href="./login.html">Administrador</a></li>
+      </div>
+    </header>
+    <!-- <button
           class="navbar-toggler"
           type="button"
           data-toggle="collapse"
@@ -36,7 +71,7 @@
           aria-expanded="false"
           aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-        </button>
+        </button> -->
 
         <div class="collapse navbar-collapse" id="barra">
           <ul class="navbar-nav mr-auto ml-auto">
@@ -62,8 +97,9 @@
         
         <!-- <div class="col-md-4 mx-auto"> -->
             <div class="row">
-              <form id="registroForm" action="" class="col-12" >
-                <div class="col-12 ">
+              <h1 class="text-center">Registro</h1>
+              <form id="registroForm" action="" class="col-14" >
+                <div class="col-14 ">
                             <!-- <h2 class="fuente_google">Registro</h2> -->
                                                         
                             <div class="form-group">
@@ -85,7 +121,7 @@
                                 <span id="error_email"></span>
                             </div> 
                         </div>
-                        <div class="col-12">
+                        <div class="col-14">
                             <div class="form-group">
                                 <div class="input-group">
                                     <input type="password" name="pass"class="form-control" id="pass "placeholder="Contraseña*" aria-label="" aria-describedby="basic-addon-pass">
@@ -96,7 +132,7 @@
                                 <span id="error_pass"></span>
                             </div>
                         </div>
-                        <div class="col-12">
+                        <div class="col-14">
                             <div class="form-group">
                                 <div class="input-group">
                                     <input type="password" class="form-control" name="pass_confir" id="pass_confir" placeholder="Confirmación de contraseña*" aria-label="" aria-describedby="basic-addon-pass">
@@ -109,7 +145,7 @@
                         </div>
                         
                            
-                        <div class="col-12">
+                        <div class="col-10">
                             <div class="form-group">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="terminos" name="terminos">
@@ -121,7 +157,7 @@
                             </div>
                             <p class="text-blue">Campos obligatorios *</p>
                         </div> 
-                        <div class="col-12 ">
+                        <div class="col-10">
                             <div class="form-group">
                               <div class="input-group">
                                 <button 
@@ -152,8 +188,36 @@
       </div>
 
     </main>
-    
+    <footer>
+			<div class="redes">
+				<ul>
+					<li class="listaFooter">
+						<i class="fa-brands fa-facebook-f"></i>
+						<a href="https://www.facebook.com/" target="_blank">Facebook</a>
+					</li>
+					<li class="listaFooter">
+						<i class="fa-brands fa-instagram"></i>
+						<a href="https://www.instagram.com/" target="_blank">Instagram</a>
+					</li>
+					<li class="listaFooter">
+						<i class="fa-brands fa-x-twitter"></i>
+						<a href="https://twitter.com/" target="_blank">Twitter</a>
+					</li>
+				</ul>
+			</div>
+			<div class="logo-footer">
+				<a href="">Pruebas</a>
+			</div>
+			<div class="copy-footer">
+				<p>Copyright © 2024 Trekking bags - Todos los derechos reservados</p>
+				<div class="contenedor-cosas">
+					<a href="./acerca-de-nosotros.html">Acerca de nosotros</a>
+					<a href="./error404.html">Contactanos</a>
+				</div>
+			</div>
+		</footer>
   
+    <script src="../js/pag-principal.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../jsRegistro/registro.js" defer></script>
     

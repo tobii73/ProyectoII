@@ -9,6 +9,17 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="../cssRegistro/style.css">
+    <link rel="stylesheet" href="../css/styleNav.css">
+    <!-- iconos link -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- iconos -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+       rel="stylesheet">
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -16,7 +27,7 @@
     ></script>
     <style>
       body {
-        background-image: url("https://wallpapercave.com/wp/wp2508260.jpg");
+        background-image: url("../imgRegistro/fondonegro.jpg");
         background-size: cover; /* Para que la imagen se ajuste al tamaño de la ventana */
         background-position: center; /* Para centrar la imagen */
         height: 100vh; /* Para que la imagen ocupe toda la altura de la ventana */
@@ -33,9 +44,36 @@
         }
       
     </style>
-    <title>Document</title>
+    <title>Trekking Bags</title>
   </head>
   <body>
+    <header>
+      <!-- Nav -->
+      <nav>
+        <!-- Logo -->
+        <div class="logo">
+          <a href="#">Logo</a>
+        </div>
+        <!-- Lista de botones -->
+        <ul class="links">
+          <li><a href="#"> Administrador</a></li>
+          <li><a href="/"> Inicio </a></li>
+          <li><a href="./registro.html"> Registrate</a></li>
+          <li><a href="#"> Iniciar Sesion</a></li>
+        </ul>
+        <!-- Boton para responsive -->
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+      <!-- Lista que aparece al hacer responsive la pagina -->
+      <div class="dropdown_menu">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="#">Iniciar Sesion</a></li>
+        <li><a href="./registro.html">Registrate</a></li>
+        <li><a href="#">Administrador</a></li>
+      </div>
+    </header>
     <!-- <h1 class="ms-3">Login</h1> -->
     <div class="d-flex justify-content-center align-items-center vh-100">
       <div>
@@ -55,7 +93,36 @@
         </form>
       </div>
     </div>
+    <footer>
+			<div class="redes">
+				<ul>
+					<li class="listaFooter">
+						<i class="fa-brands fa-facebook-f"></i>
+						<a href="https://www.facebook.com/" target="_blank">Facebook</a>
+					</li>
+					<li class="listaFooter">
+						<i class="fa-brands fa-instagram"></i>
+						<a href="https://www.instagram.com/" target="_blank">Instagram</a>
+					</li>
+					<li class="listaFooter">
+						<i class="fa-brands fa-x-twitter"></i>
+						<a href="https://twitter.com/" target="_blank">Twitter</a>
+					</li>
+				</ul>
+			</div>
+			<div class="logo-footer">
+				<a href="">Pruebas</a>
+			</div>
+			<div class="copy-footer">
+				<p>Copyright © 2024 Trekking bags - Todos los derechos reservados</p>
+				<div class="contenedor-cosas">
+					<a href="./acerca-de-nosotros.html">Acerca de nosotros</a>
+					<a href="./error404.html">Contactanos</a>
+				</div>
+			</div>
+		</footer>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../jsRegistro/login.js"></script>
+    <script src="../js/pag-principal.js"></script>
   </body>
 </html>
