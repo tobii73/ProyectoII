@@ -23,14 +23,13 @@ function limitarCaracteres(input) {
 
 
 class Producto {
-	constructor(id, nombre, precio, descripcion, categoria, stock, imagen) {
+	constructor(id, nombre, precio, descripcion, categoria, stock) {
 		this.id = id;
 		this.nombre = nombre;
 		this.precio = precio;
 		this.descripcion = descripcion;
         this.categoria = categoria;
         this.stock = stock;
-		this.imagen = imagen;
 		}
 	}
 
@@ -112,9 +111,6 @@ function crearProducto(e) {
 	const descripcion = document.querySelector('#descripcion').value.trim();
     const categoria = document.querySelector('#categoria').value.trim();
     const stock = document.querySelector('#stock').value.trim();
-	const url = document.querySelector('#url');
-	let imagen = url.files[0];
-	let imagenURL = URL.createObjectURL(imagen);
 
 	const error = document.getElementById('error');
 	if (nombre.length === 0 || precio.length === 0 || descripcion.length === 0 || categoria.length === 0 || stock.length === 0){
@@ -131,7 +127,7 @@ function crearProducto(e) {
 		}, 2000);
 		return false; 
 	}
-	const newProduct = new Producto(id, nombre, precio, descripcion, categoria, stock,url);
+	const newProduct = new Producto(id, nombre, precio, descripcion, categoria, stock);
 	productosRegistrados.push(newProduct);
 
 	localStorage.setItem('productos', JSON.stringify(productosRegistrados));
