@@ -16,41 +16,7 @@
 		<main>
 			<h1 class="text-center text-white fw-light">MOCHILAS CASUALES</h1>
 			<div class="container">
-				<div class="row">
-					<div class="col-lg-4 col-md-6 producto">
-						<a href="#">
-							<img src="/img/MochilaCasual.png" alt="Producto 1" />
-						</a>
-						<h5>Mochila CodeBack</h5>
-						<p class="precio">$39.999</p>
-						<p class="oferta">Oferta limitada: $31.999</p>
-					</div>
-					<div class="col-lg-4 col-md-6 producto">
-						<img src="/img/mochilaCas 2.webp" alt="Producto 2" />
-						<h5>Mochila militar</h5>
-						<p>$29.999</p>
-					</div>
-					<div class="col-lg-4 col-md-6 producto">
-						<img src="/img/mochilaCas 3.webp" alt="Producto 3" />
-						<h5>Mochila militar gris</h5>
-						<p>$29.999</p>
-					</div>
-					<div class="col-lg-4 col-md-6 producto">
-						<img src="/img/mochilaCas 4.webp" alt="Producto 4" />
-						<h5>Mochila casual gris</h5>
-						<p>$34.999</p>
-					</div>
-					<div class="col-lg-4 col-md-6 producto">
-						<img src="/img/mochilaCas 5.webp" alt="Producto 5" />
-						<h5>Mochila casual verde</h5>
-						<p>$34.999</p>
-					</div>
-					<div class="col-lg-4 col-md-6 producto">
-						<img src="/img/mochilaCas 6.webp" alt="Producto 6" />
-						<h5>Mochila casual azul</h5>
-						<p>$34.999</p>
-					</div>
-				</div>
+				<div class="row" id="productos"></div>
 			</div>
 		</main>
 		<script
@@ -58,5 +24,71 @@
 			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 			crossorigin="anonymous"
 		></script>
+
+		<script>
+			// Array de productos
+			const productos = [
+				{
+					nombre: 'Mochila CodeBack',
+					precio: 39999,
+					imagen: '/img/MochilaCasual.png',
+					oferta: 31999,
+				},
+				{
+					nombre: 'Mochila militar',
+					precio: 29999,
+					imagen: '/img/mochilaCas 2.webp',
+				},
+				{
+					nombre: 'Mochila militar gris',
+					precio: 29999,
+					imagen: '/img/mochilaCas 3.webp',
+				},
+				{
+					nombre: 'Mochila casual gris',
+					precio: 34999,
+					imagen: '/img/mochilaCas 4.webp',
+				},
+				{
+					nombre: 'Mochila casual verde',
+					precio: 34999,
+					imagen: '/img/mochilaCas 5.webp',
+				},
+				{
+					nombre: 'Mochila casual azul',
+					precio: 34999,
+					imagen: '/img/mochilaCas 6.webp',
+				},
+			];
+
+			// Función para mostrar los productos en el DOM
+			function mostrarProductos(productosMostrados) {
+				const contenedorProductos = document.getElementById('productos');
+				contenedorProductos.innerHTML = ''; // Limpiar productos anteriores
+
+				productosMostrados.forEach((producto) => {
+					const columna = document.createElement('div');
+					columna.classList.add('col-lg-4', 'col-md-6', 'producto');
+					columna.innerHTML = `
+						<a href="#">
+							<img src="${producto.imagen}" alt="${producto.nombre}" class="img-fluid" />
+						</a>
+						<h5>${producto.nombre}</h5>
+						<p class="precio">$${producto.precio}</p>
+						${
+							producto.oferta
+								? `<p class="oferta">Oferta limitada: $${producto.oferta}</p>`
+								: ''
+						}
+					`;
+					contenedorProductos.appendChild(columna);
+				});
+			}
+
+			// Mostrar todos los productos al cargar la página
+			window.addEventListener('DOMContentLoaded', function () {
+				mostrarProductos(productos);
+			});
+		</script>
 	</body>
 </html>

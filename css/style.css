@@ -119,6 +119,29 @@ img {
 	height: auto;
 }
 
+#sugerencias {
+	position: absolute;
+	border-radius: 20%;
+	width: calc(100%);
+	background-color: #fff;
+	border: px solid #ccc;
+	max-height: 100px;
+	overflow-y: auto;
+	z-index: 1000;
+	display: none;
+}
+
+#sugerencias div {
+	padding: 8px 16px;
+
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+#sugerencias div:hover {
+	background-color: #f0f0f0;
+}
+
 .dark-mode {
 	background-color: #212529;
 	color: #fff;

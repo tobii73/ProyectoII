@@ -16,41 +16,7 @@
 		<main>
 			<h1 class="text-center text-white fw-light">BOLSOS</h1>
 			<div class="container">
-				<div class="row">
-					<div class="col-lg-4 col-md-6 producto">
-						<a href="#">
-							<img src="/img/bolson 1.webp" alt="Producto 1" />
-						</a>
-						<h5>Bolso rojo CodeBack</h5>
-						<p class="precio">$59.999</p>
-						<p class="oferta">Oferta limitada: $49.999</p>
-					</div>
-					<div class="col-lg-4 col-md-6 producto">
-						<img src="/img/bolso 2.webp" alt="Producto 2" />
-						<h5>Bolso gris</h5>
-						<p>$59.999</p>
-					</div>
-					<div class="col-lg-4 col-md-6 producto">
-						<img src="/img/bolso 3.webp" alt="Producto 3" />
-						<h5>Bolso militar gris</h5>
-						<p>$59.999</p>
-					</div>
-					<div class="col-lg-4 col-md-6 producto">
-						<img src="/img/bolso 4.webp" alt="Producto 4" />
-						<h5>Bolso verde claro</h5>
-						<p>$59.999</p>
-					</div>
-					<div class="col-lg-4 col-md-6 producto">
-						<img src="/img/bolso 5.webp" alt="Producto 5" />
-						<h5>Bolso azul</h5>
-						<p>$59.999</p>
-					</div>
-					<div class="col-lg-4 col-md-6 producto">
-						<img src="/img/bolso 6.webp" alt="Producto 6" />
-						<h5>Bolso verde militar</h5>
-						<p>$59.999</p>
-					</div>
-				</div>
+				<div class="row" id="productos"></div>
 			</div>
 		</main>
 		<script
@@ -58,5 +24,53 @@
 			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 			crossorigin="anonymous"
 		></script>
+		<script>
+			const productos = [
+				{
+					nombre: 'Bolso rojo CodeBack',
+					precio: 59999,
+					imagen: '/img/bolson 1.png',
+					oferta: 49999,
+				},
+				{ nombre: 'Bolso gris', precio: 59999, imagen: '/img/bolso 2.png' },
+				{ nombre: 'Bolso militar gris', precio: 59999, imagen: '//img/bolso 3.png' },
+				{ nombre: 'Bolso verde claro', precio: 59999, imagen: '//img/bolso 4.png' },
+				{ nombre: 'Bolso azul', precio: 59999, imagen: '/img/bolso 5.png' },
+				{
+					nombre: 'Bolso verde militar',
+					precio: 59999,
+					imagen: '/img/bolso 6.png',
+				},
+			];
+
+			// Función para mostrar los productos en el DOM
+			function mostrarProductos(productosMostrados) {
+				const contenedorProductos = document.getElementById('productos');
+				contenedorProductos.innerHTML = ''; // Limpiar productos anteriores
+
+				productosMostrados.forEach((producto) => {
+					const columna = document.createElement('div');
+					columna.classList.add('col-lg-4', 'col-md-6', 'producto');
+					columna.innerHTML = `
+						<a href="#">
+							<img src="${producto.imagen}" alt="${producto.nombre}" class="img-fluid" />
+						</a>
+						<h5>${producto.nombre}</h5>
+						<p class="precio">$${producto.precio}</p>
+						${
+							producto.oferta
+								? `<p class="oferta">Oferta limitada: $${producto.oferta}</p>`
+								: ''
+						}
+					`;
+					contenedorProductos.appendChild(columna);
+				});
+			}
+
+			// Mostrar todos los productos al cargar la página
+			window.addEventListener('DOMContentLoaded', function () {
+				mostrarProductos(productos);
+			});
+		</script>
 	</body>
 </html>
