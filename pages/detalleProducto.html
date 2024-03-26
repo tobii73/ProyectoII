@@ -17,8 +17,39 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400;1,500&display=swap"
       rel="stylesheet">
+      <link rel="stylesheet" href="../css/styleNav.css">
 </head>
 <body>
+  <header>
+    <!-- Nav -->
+    <nav>
+      <!-- Logo -->
+      <div class="contenedorLogo">
+        <a href="/"><img src="../img/logo.png"></a>
+  
+      </div>
+      <!-- Lista de botones -->
+      <ul class="links">
+        <ul class="links">
+          <li><a href="./login.html"> Administrador</a></li>
+          <li><a href="/"> Inicio </a></li>
+          <li><a href="./registro.html"> Registrate</a></li>
+          <li><a href="./login.html"> Iniciar Sesion</a></li>
+        </ul>
+      </ul>
+      <!-- Boton para responsive -->
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </nav>
+    <!-- Lista que aparece al hacer responsive la pagina -->
+    <div class="dropdown_menu">
+      <li><a href="/">Inicio</a></li>
+      <li><a href="./login.html">Iniciar Sesion</a></li>
+      <li><a href="./registro.html">Registrate</a></li>
+      <li><a href="#">Administrador</a></li>
+    </div>
+  </header>
     <div class="container">
          <div class="row mt-3">
             <div class="col-sm-12 col-lg-6 ">
@@ -196,7 +227,35 @@
 
 
       </section>
-
+      <footer>
+        <div class="redes">
+          <ul>
+            <li class="listaFooter">
+              <i class="fa-brands fa-facebook-f"></i>
+              <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+            </li>
+            <li class="listaFooter">
+              <i class="fa-brands fa-instagram"></i>
+              <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+            </li>
+            <li class="listaFooter">
+              <i class="fa-brands fa-x-twitter"></i>
+              <a href="https://twitter.com/" target="_blank">Twitter</a>
+            </li>
+          </ul>
+        </div>
+        <div class="contenedorLogo">
+          <a href="/"><img src="../img/logo.png"></a>
+      
+        </div>
+        <div class="copy-footer">
+          <p>Copyright © 2024 Trekking bags - Todos los derechos reservados</p>
+          <div class="contenedor-cosas">
+            <a href="./acerca-de-nosotros.html">Acerca de nosotros</a>
+            <a href="./error404.html">Contactanos</a>
+          </div>
+        </div>
+      </footer>
 
 
     <script src="../js/detalleProducto.js"></script>
