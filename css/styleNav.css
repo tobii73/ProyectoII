@@ -207,6 +207,14 @@ footer {
     list-style-type: none;
 }
 
+.contenedorLogo {
+    width: 15%;
+  }
+  
+  .contenedorLogo img {
+    width: 100%;
+}
+
 @keyframes moveLink {
     0% {
         transform: translateY(0);

@@ -1,5 +1,8 @@
 body {
-	background-color: black !important;
+	background-image: url(../img/fondoPag.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 h1 {
