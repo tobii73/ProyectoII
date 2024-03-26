@@ -48,9 +48,9 @@ function loginUsuario(e) {
 	if (loginSuccess) {
 		// Redirigir al usuario a index.html
 		
-		if (!usuarioAdmin) { window.location.href = "../index.html"; /* AQUI DEBEN PONER EL NOMBRE DE LA PAGINA PARA LA COMPRA DE PRODUCTOS*/ */
+		if (!usuarioAdmin) { window.location.href = "../index.html"; /* AQUI DEBEN PONER EL NOMBRE DE LA PAGINA PARA LA COMPRA DE PRODUCTOS*/ 
 		}		
-		else{ { window.location.href = "https://gmail.com"; /*AQUI VA LA PAGINA DE ADMINISTRACION*/ */
+		else{ { window.location.href = "https://gmail.com"; /*AQUI VA LA PAGINA DE ADMINISTRACION*/ 
 		}
 	} 
 	validarLogin.reset();

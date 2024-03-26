@@ -12,4 +12,14 @@ function bajar() {
 
 	toggle_BtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'; //Cambia el icono por una cruz al clickearlo
 }
+
 // Nav
+
+const logon = document.querySelector('.logon');
+const logof = document.querySelector('.logof');
+logon.addEventListener('click', redireccionar);
+logof.addEventListener('click', redireccionar);
+
+function redireccionar() {
+	window.location.href = '/index.html'; //Dentro de los comillas ingresar el link a donde queremos redirecionar
+}
