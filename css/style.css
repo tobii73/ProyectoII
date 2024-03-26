@@ -38,6 +38,13 @@ h6,
 	color: #212529;
 }
 
+#colorNav {
+	background-color: #212529 !important;
+}
+
+#colorHeader {
+	background-color: #212529 !important;
+}
 a {
 	text-decoration: none;
 	color: var(--c-brand);
@@ -71,7 +78,7 @@ a {
 .container-busqueda {
 	position: absolute;
 	left: 50%;
-	top: 75%;
+	top: 80%;
 	transform: translate(-50%, -50%);
 }
 
