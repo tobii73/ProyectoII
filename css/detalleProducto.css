@@ -109,24 +109,29 @@
   }
 
 body{
-     background-color: rgb(14, 14, 14) !important;
-     /* font-family: 'Poppins'; */
+     background-color: rgba(14, 14, 14, 0.877) !important;
+     font-family: 'Poppins' !important;
     /* max-width: 1200px; */
     /* margin: 0 auto; */
 }
 
-h1{
-  color: white !important;
+section h2, .nombreProducto, .idProducto, .precioProducto{
+    color: whitesmoke;
 }
 
-img{
-    max-width: 100%;
+.accordion-item, .accordion-button {
+    background-color: transparent !important;
+    color: whitesmoke !important;
 }
 
-/* Para centrar el logo de la pagina */
-header{
-  display: flex;
-  align-items: center;
-  padding: 30px;
-  justify-content: center;
+.compartirProducto{
+    color: whitesmoke !important;
+}
+
+.cantidadProducto{
+    color: whitesmoke !important;
+}
+
+.card-body, .card-title{
+    color: whitesmoke !important;
 }
