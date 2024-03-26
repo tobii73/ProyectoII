@@ -38,41 +38,118 @@ $(document).ready(function () {
 	});
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-	const inputBuscar = document.getElementById('inputBuscar');
-	const btnBuscar = document.getElementById('btnBuscar');
+const opciones = ['Bolsos', 'Mochilas Casuales', 'Mochilas de Trekking'];
+let mouseSobreSugerencias = false;
 
-	btnBuscar.addEventListener('click', function () {
-		buscar();
+document.getElementById('inputBuscar').addEventListener('input', function () {
+	const busqueda = this.value.toLowerCase();
+	const sugerencias = opciones.filter((opcion) =>
+		opcion.toLowerCase().startsWith(busqueda)
+	);
+	mostrarSugerencias(sugerencias);
+});
+
+document.getElementById('botonBuscar').addEventListener('click', function () {
+	const busqueda = document.getElementById('inputBuscar').value.toLowerCase();
+	redirigir(busqueda);
+});
+
+document.getElementById('sugerencias').addEventListener('mouseenter', function () {
+	mouseSobreSugerencias = true;
+});
+
+document.getElementById('sugerencias').addEventListener('mouseleave', function () {
+	mouseSobreSugerencias = false;
+	ocultarSugerencias();
+});
+
+function mostrarSugerencias(sugerencias) {
+	const sugerenciasContainer = document.getElementById('sugerencias');
+	sugerenciasContainer.innerHTML = '';
+	sugerencias.forEach((sugerencia) => {
+		const sugerenciaElemento = document.createElement('div');
+		sugerenciaElemento.textContent = sugerencia;
+		sugerenciaElemento.addEventListener('click', function () {
+			document.getElementById('inputBuscar').value = sugerencia;
+			sugerenciasContainer.innerHTML = '';
+			redirigir(sugerencia.toLowerCase());
+		});
+		sugerenciasContainer.appendChild(sugerenciaElemento);
 	});
+	sugerenciasContainer.style.display =
+		sugerencias.length > 0 &&
+		document.getElementById('inputBuscar').value.trim().length > 0
+			? 'block'
+			: 'none';
+}
 
-	inputBuscar.addEventListener('keypress', function (e) {
-		if (e.key === 'Enter') {
-			buscar();
-		}
-	});
-
-	function buscar() {
-		const textoBusqueda = inputBuscar.value.trim().toLowerCase();
-
-		// Verificar si el texto de búsqueda coincide con alguna de tus categorías o productos
-		if (
-			textoBusqueda === 'Mochilas casuales' ||
-			textoBusqueda === 'Bolsos' ||
-			textoBusqueda === 'Mochilas de trekking'
-		) {
-			// Redirigir a la página correspondiente a la categoría
-			window.location.href = `/pages/mochilasCas.html${textoBusqueda}.html`;
-		} else if (
-			textoBusqueda === 'producto1' ||
-			textoBusqueda === 'producto2' ||
-			textoBusqueda === 'producto3'
-		) {
-			// Redirigir a la página correspondiente al producto
-			window.location.href = `/pagina_de_${textoBusqueda}.html`;
-		} else {
-			// Texto de búsqueda no reconocido
-			alert('No se encontró la categoría o producto buscado.');
-		}
+function ocultarSugerencias() {
+	const sugerenciasContainer = document.getElementById('sugerencias');
+	if (!mouseSobreSugerencias) {
+		sugerenciasContainer.style.display = 'none';
 	}
+}
+
+function redirigir(busqueda) {
+	switch (busqueda) {
+		case 'bolsos':
+			window.location.href = '/pages/bolsos.html';
+			break;
+		case 'mochilas casuales':
+			window.location.href = '/pages/mochilasCas.html';
+			break;
+		case 'mochilas de trekking':
+			window.location.href = '/pages/mochilaTrekking.html';
+			break;
+		default:
+			Swal.fire({
+				title: 'Producto no encontrado',
+				text: 'Por favor, intentalo de nuevo',
+				icon: 'question',
+			});
+	}
+}
+
+document.getElementById('enviarBtn').addEventListener('click', function (event) {
+	event.preventDefault(); // Evita que el formulario se envíe automáticamente
+
+	const nombreC = document.querySelector('#nombreCompletoC').value.trim();
+	const emailC = document.querySelector('#emailC').value.trim();
+	const mensajeC = document.querySelector('#mensajeC').value.trim();
+
+	// Validaciones básicas
+	if (nombreC.length === 0 || emailC.length === 0 || mensajeC.length === 0) {
+		Swal.fire({
+			icon: 'error',
+			title: 'Verifique los campos',
+			text: 'Todos los campos son obligatorios',
+		});
+		return;
+	} else if (nombreC.length < 2 || nombreC.length > 20) {
+		Swal.fire({
+			icon: 'error',
+			title: 'Verifique su nombre',
+			text: 'Ingrese su nombre completo',
+		});
+		return;
+	}
+
+	// Expresión regular para validar correo electrónico
+	const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+	if (!emailRegex.test(emailC)) {
+		Swal.fire({
+			icon: 'error',
+			title: 'Verifique su mail',
+			text: 'Ingrese su mail correctamente',
+		});
+		return;
+	}
+
+	Swal.fire({
+		position: 'top-end',
+		icon: 'success',
+		title: 'Su mensaje fue enviado con éxito',
+		showConfirmButton: false,
+		timer: 1500,
+	});
 });

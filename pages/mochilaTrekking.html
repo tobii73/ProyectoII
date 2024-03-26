@@ -25,6 +25,7 @@
 				<!-- Logo -->
 				<div class="contenedorLogo">
 					<a href="/"><img src="../img/logo.png"></a>
+
 				</div>
 				<!-- Lista de botones -->
 				<ul class="links">
@@ -51,41 +52,7 @@
 		<main>
 			<h1 class="text-center text-white fw-light">MOCHILAS DE TRAKKING</h1>
 			<div class="container">
-				<div class="row">
-					<div class="col-lg-4 col-md-6 producto">
-						<a href="#">
-							<img src="/img/mochiltrekking 1.webp" alt="Producto 1" />
-						</a>
-						<h5>Mochila trekking CodeBack</h5>
-						<p class="precio">$79.999</p>
-						<p class="oferta">Oferta limitada: $69.999</p>
-					</div>
-					<div class="col-lg-4 col-md-6 producto">
-						<img src="/img/mochTrekking 2.webp" alt="Producto 2" />
-						<h5>Mochila trekking militar</h5>
-						<p>$79.999</p>
-					</div>
-					<div class="col-lg-4 col-md-6 producto">
-						<img src="/img/mochTrekking 3.webp" alt="Producto 3" />
-						<h5>Mochila trekking negra-blanca</h5>
-						<p>$79.999</p>
-					</div>
-					<div class="col-lg-4 col-md-6 producto">
-						<img src="/img/mochTrekking 4.webp" alt="Producto 4" />
-						<h5>Mochila trekking verde</h5>
-						<p>$79.999</p>
-					</div>
-					<div class="col-lg-4 col-md-6 producto">
-						<img src="/img/mochTrekking 5.webp" alt="Producto 5" />
-						<h5>Mochila trekking gris-verde</h5>
-						<p>$79.999</p>
-					</div>
-					<div class="col-lg-4 col-md-6 producto">
-						<img src="/img/mochTrekking 6.webp" alt="Producto 6" />
-						<h5>Mochila trekking gris</h5>
-						<p>$79.999</p>
-					</div>
-				</div>
+				<div class="row" id="productos"></div>
 			</div>
 		</main>
 		<footer>
@@ -104,9 +71,10 @@
 						<a href="https://twitter.com/" target="_blank">Twitter</a>
 					</li>
 				</ul>
-			</div>
+      </div>
 			<div class="contenedorLogo">
 				<a href="/"><img src="../img/logo.png"></a>
+
 			</div>
 			<div class="copy-footer">
 				<p>Copyright © 2024 Trekking bags - Todos los derechos reservados</p>
@@ -121,5 +89,71 @@
 			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 			crossorigin="anonymous"
 		></script>
+		<script>
+			// Array de productos
+			const productos = [
+				{
+					nombre: 'Mochila trekking CodeBack',
+					precio: 79999,
+					imagen: '/img/mochiltrekking 1.png',
+					oferta: 69999,
+				},
+				{
+					nombre: 'Mochila trekking militar',
+					precio: 79999,
+					imagen: '/img/mochTrekking 2.png',
+				},
+				{
+					nombre: 'Mochila trekking negra-blanca',
+					precio: 79999,
+					imagen: '/img/mochTrekking 3.png',
+				},
+				{
+					nombre: 'Mochila trekking verde',
+					precio: 79999,
+					imagen: '/img/mochTrekking 4.png',
+				},
+				{
+					nombre: 'Mochila trekking gris-verde',
+					precio: 79999,
+					imagen: '/img/mochTrekking 5.png',
+				},
+				{
+					nombre: 'Mochila trekking gris',
+					precio: 79999,
+					imagen: '/img/mochTrekking 6.png',
+				},
+			];
+
+			// Función para mostrar los productos en el DOM
+			function mostrarProductos(productosMostrados) {
+				const contenedorProductos = document.getElementById('productos');
+				contenedorProductos.innerHTML = ''; // Limpiar productos anteriores
+
+				productosMostrados.forEach((producto) => {
+					const columna = document.createElement('div');
+					columna.classList.add('col-lg-4', 'col-md-6', 'producto');
+					columna.innerHTML = `
+						<a href="#">
+							<img src="${producto.imagen}" alt="${producto.nombre}" class="img-fluid" />
+						</a>
+						<h5>${producto.nombre}</h5>
+						<p class="precio">$${producto.precio}</p>
+						${
+							producto.oferta
+								? `<p class="oferta">Oferta limitada: $${producto.oferta}</p>`
+								: ''
+						}
+					`;
+					contenedorProductos.appendChild(columna);
+				});
+			}
+
+			// Mostrar todos los productos al cargar la página
+			window.addEventListener('DOMContentLoaded', function () {
+				mostrarProductos(productos);
+			});
+		</script>
+		<script src="../js/pag-principal.js"></script>
 	</body>
 </html>
