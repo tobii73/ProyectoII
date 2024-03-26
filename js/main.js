@@ -2,6 +2,19 @@ const darkModeToggle = document.getElementById('dark-mode-toggle');
 let productosRegistrados = JSON.parse(localStorage.getItem('productos')) || [];
 const body = document.body;
 
+
+function mostrarProducto() {
+	productosRegistrados.map(function(producto) {
+		const card = document.getElementById('bolsos');
+
+		card.innerHTML = `
+		<p>${producto.nombre}</p>
+		<p>${producto.precio}</p>
+		`
+	})
+}
+
+
 darkModeToggle.addEventListener('click', () => {
 	body.classList.toggle('dark-mode');
 });

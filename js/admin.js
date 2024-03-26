@@ -23,15 +23,17 @@ function limitarCaracteres(input) {
 
 
 class Producto {
-	constructor(id, nombre, precio, descripcion, categoria, stock) {
+	constructor(id, nombre, precio, descripcion, categoria, stock, imagen) {
 		this.id = id;
 		this.nombre = nombre;
 		this.precio = precio;
 		this.descripcion = descripcion;
         this.categoria = categoria;
         this.stock = stock;
+		this.imagen = imagen;
+		}
 	}
-}
+
 
 
 function cargarUsuarios() {
@@ -39,10 +41,10 @@ function cargarUsuarios() {
 		//creamos una etiqueta tr
 		const tr = document.createElement('tr'); 
 		tr.innerHTML = `
-        <td>${usuario.id}</td>
-        <td>${usuario.name}</td>
-        <td>${usuario.email}</td>
-		<td class="text-center">
+        <td class="align-middle">${usuario.id}</td>
+        <td class="align-middle">${usuario.name}</td>
+        <td class="align-middle">${usuario.email}</td>
+		<td class="text-center align-middle"">
 			<button class="boton boton1 btn btn-success mx-3 my-3" onclick="validar(${usuario.id})">Validar</button>
 			<button class="boton boton2 btn btn-secondary deshabilitar" onclick="invalidar(${usuario.id})">Invalidar</button>
 		</td>
@@ -110,6 +112,9 @@ function crearProducto(e) {
 	const descripcion = document.querySelector('#descripcion').value.trim();
     const categoria = document.querySelector('#categoria').value.trim();
     const stock = document.querySelector('#stock').value.trim();
+	const url = document.querySelector('#url');
+	let imagen = url.files[0];
+	let imagenURL = URL.createObjectURL(imagen);
 
 	const error = document.getElementById('error');
 	if (nombre.length === 0 || precio.length === 0 || descripcion.length === 0 || categoria.length === 0 || stock.length === 0){
@@ -126,7 +131,7 @@ function crearProducto(e) {
 		}, 2000);
 		return false; 
 	}
-	const newProduct = new Producto(id, nombre, precio, descripcion, categoria, stock);
+	const newProduct = new Producto(id, nombre, precio, descripcion, categoria, stock,url);
 	productosRegistrados.push(newProduct);
 
 	localStorage.setItem('productos', JSON.stringify(productosRegistrados));
@@ -150,12 +155,12 @@ function cargarProductos() {
 		const tr = document.createElement('tr');
 		//a esa etiqueta TR le implementamos los td con la informacion del usuario que se este iterando
 		tr.innerHTML = `
-        <td>${producto.id}</td>
-        <td>${producto.nombre}</td>
-        <td>${producto.precio}</td>
-        <td>${producto.descripcion}</td>
-        <td>${producto.categoria}</td>
-        <td>${producto.stock}</td>
+        <td class="align-middle">${producto.id}</td>
+        <td class="align-middle">${producto.nombre}</td>
+        <td class="align-middle">${producto.precio}</td>
+        <td class="align-middle">${producto.descripcion}</td>
+        <td class="align-middle">${producto.categoria}</td>
+        <td class="align-middle">${producto.stock}</td>
         <td class="text-center">
             <button class="btn btn-primary mx-3 my-3" onclick="modalEditarProducto(${producto.id})">Editar</button>
             <button class="btn btn-danger" onclick="borrarProducto(${producto.id})">Eliminar</button>
@@ -169,11 +174,10 @@ function cargarProductos() {
 
 
 function borrarProducto(id) {
-	productosRegistrados = productosRegistrados.filter( function(producto){
+	productosRegistrados = productosRegistrados.filter(function(producto){
 	 	return	producto.id !== id;
 	});
-
-
+	
 	localStorage.setItem('productos' , JSON.stringify(productosRegistrados));
 
 	cargarProductos();

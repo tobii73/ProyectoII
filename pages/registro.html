@@ -30,15 +30,35 @@
 			crossorigin="anonymous"
 		/>
     <!-- <link rel="stylesheet" href="./cssRegistro/style.css"> -->
-    <title>Mochilas y Carteras</title>
+    <style>
+      body {
+        background-image: url("../img/fondoPag.jpg");
+        background-size: cover; /* Para que la imagen se ajuste al tamaño de la ventana */
+        background-position: center; /* Para centrar la imagen */
+        height: 100vh; /* Para que la imagen ocupe toda la altura de la ventana */
+        color: goldenrod; /* Esto establece el color del texto a blanco para todos los elementos */
+				
+      }
+	  .custom-btn {
+        color: white; /* Cambia este valor al color deseado */
+		background-color: goldenrod; /* Cambia este valor al color deseado */
+        border-color: goldenrod; /* Cambia este valor al color deseado */
+    }
+	.swal2-confirm {
+            background-color: yellow; /* Cambia este valor al color deseado */
+        }
+      
+    </style>
+    <title>Registro</title>
   </head>
   <body>
     <header>
       <!-- Nav -->
       <nav>
         <!-- Logo -->
-        <div class="logo-nav">
-          <img src="../img/logo.png" alt="Logo de la pagina" class="logon">
+        <div class="contenedorLogo">
+          <a href="/"><img src="../img/logo.png"></a>
+
         </div>
         <!-- Lista de botones -->
         <ul class="links">
@@ -92,6 +112,7 @@
     </nav>
     <main class="d-flex justify-content-center align-items-center vh-100">
       <div class="col-md-6">
+        <h3 class="text-center p-3 mb-2">Registro</h3>
       <!-- <div class="py-5 container-fluid bg-light  text-dark border rounded"> -->
         <div class="col-12" id="alerta_bienvenido">
         
@@ -208,9 +229,10 @@
 					</li>
 				</ul>
 			</div>
-      <div class="logo-footer">
-        <img src="../img/logo.png" alt="Logo de la pagina" class="logof">
-      </div>
+			<div class="contenedorLogo">
+				<a href="/"><img src="../img/logo.png"></a>
+			</div>
+
 			<div class="copy-footer">
 				<p>Copyright © 2024 Trekking bags - Todos los derechos reservados</p>
 				<div class="contenedor-cosas">

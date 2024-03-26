@@ -33,7 +33,7 @@
     	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400;1,500&display=swap"
         rel="stylesheet">
-		<title>Trekking bad</title>
+		<title>Administrador</title>
 	</head>
 
 <body>
@@ -41,8 +41,9 @@
 		<!-- Nav -->
 		<nav>
 			<!-- Logo -->
-			<div class="logo-nav">
-				<img src="../img/logo.png" alt="Logo de la pagina" class="logon">
+			<div class="contenedorLogo">
+				<a href="/"><img src="../img/logo.png"></a>
+
 			</div>
 			<!-- Lista de botones -->
 			<ul class="links">
@@ -69,31 +70,10 @@
 	<main>
 		<section class="container-fluid">
 			<h1 class="text-center p-4">Página de administrador</h1>
-
-  
-				<!-- Modal -->
-				<!-- <div class="modal fade" id="exampleModalUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-						<h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-						</div>
-						<div class="modal-body">
-						...
-						</div>
-						<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
-						</div>
-					</div>
-					</div>
-				</div> -->
-
 				<!-- tabla de usuarios -->
 				<h2 class="text-center mt-3 mb-0 p-2 tituloTabla">Lista de usuarios</h2>
 				<div class="table-responsive">
-					<table class="table table-dark tabla-sm">
+					<table class="table table-dark tabla-sm ">
 						<thead>
 							<tr >
 								<th scope="col">ID</th>
@@ -101,7 +81,7 @@
 								<th scope="col" colspan="2">Email</th>
 							</tr>
 						</thead>
-						<tbody id="tablaUsuarios">
+						<tbody id="tablaUsuarios" class="">
 	
 						</tbody>
 					</table>
@@ -141,6 +121,10 @@
 										<label class="form-label">Nombre</label>
 										<input type="text" class="form-control" id="nombre" maxlength="25" />
 										
+									</div>
+									<div>
+										<label class="form-label">Imagen</label>
+										<input type="file" class="form-control" id="url">
 									</div>
 									<div class="mb-3">
 										<label class="form-label">Precio</label>
@@ -196,7 +180,7 @@
 							</tr>
 						</thead>
 						<tbody id="tablaProducto">
-	
+							
 						</tbody>
 					</table>
 				</div>
@@ -275,8 +259,9 @@
 					</li>
 				</ul>
 			</div>
-			<div class="logo-footer">
-				<img src="../img/logo.png" alt="Logo de la pagina" class="logof">
+			<div class="contenedorLogo">
+				<a href="/"><img src="../img/logo.png"></a>
+
 			</div>
 			<div class="copy-footer">
 				<p>Copyright © 2024 Trekking bags - Todos los derechos reservados</p>
