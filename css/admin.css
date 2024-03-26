@@ -1,0 +1,39 @@
+body {
+    box-sizing: border-box;
+    background-image: url(../img/fondoPag.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    color: goldenrod; 
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+
+.tituloTabla {
+  background-color: #212529;
+  width: 100%;
+}
+
+
+.tablaAdmin {
+  margin-bottom: 2em;
+}
+
+.botonProducto {
+  background-color: goldenrod !important;
+  color: aliceblue;
+}
+
+.botonProducto:hover {
+  background-color: rgb(151, 116, 27)
+}
+
+.deshabilitado {
+  pointer-events: none;
+  opacity: 0.5;
+}
+

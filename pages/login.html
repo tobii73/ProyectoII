@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../cssRegistro/style.css">
+    <link rel="stylesheet" href="../css/styleNav.css">
+    <!-- iconos link -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- iconos -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+       rel="stylesheet">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        background-image: url("../img/fondoPag.jpg");
+        background-size: cover; /* Para que la imagen se ajuste al tamaño de la ventana */
+        background-position: center; /* Para centrar la imagen */
+        height: 100vh; /* Para que la imagen ocupe toda la altura de la ventana */
+        color: goldenrod; /* Esto establece el color del texto a blanco para todos los elementos */
+				
+      }
+	  .custom-btn {
+        color: white; /* Cambia este valor al color deseado */
+		background-color: goldenrod; /* Cambia este valor al color deseado */
+        border-color: goldenrod; /* Cambia este valor al color deseado */
+    }
+	.swal2-confirm {
+            background-color: yellow; /* Cambia este valor al color deseado */
+        }
+      
+    </style>
+    <title>Login</title>
+  </head>
+  <body>
+    <header>
+      <!-- Nav -->
+      <nav>
+        <!-- Logo -->
+        <div class="contenedorLogo">
+          <a href="/"><img src="../img/logo.png"></a>
+        </div>
+        <!-- Lista de botones -->
+        <ul class="links">
+          <li><a href="#"> Administrador</a></li>
+          <li><a href="/"> Inicio </a></li>
+          <li><a href="./registro.html"> Registrate</a></li>
+          <li><a href="#"> Iniciar Sesion</a></li>
+        </ul>
+        <!-- Boton para responsive -->
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+      <!-- Lista que aparece al hacer responsive la pagina -->
+      <div class="dropdown_menu">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="#">Iniciar Sesion</a></li>
+        <li><a href="./registro.html">Registrate</a></li>
+        <li><a href="#">Administrador</a></li>
+      </div>
+    </header>
+    <!-- <h1 class="ms-3">Login</h1> -->
+    <div class="d-flex justify-content-center align-items-center vh-100">
+      <div>
+        <h1 class="ms-3 text-center">Login</h1>
+        <form class="w-100 p-3 mx-auto" id="validarLogin">
+          <!-- <form class="w-50 p-3" id="validarLogin"> -->
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="password" />
+          </div>
+          <!-- <button type="submit" class="btn btn-primary">Ingreso</button> -->
+		  <button type="submit" class="btn btn-primary custom-btn">Ingreso</button>
+        </form>
+      </div>
+    </div>
+    <footer>
+			<div class="redes">
+				<ul>
+					<li class="listaFooter">
+						<i class="fa-brands fa-facebook-f"></i>
+						<a href="https://www.facebook.com/" target="_blank">Facebook</a>
+					</li>
+					<li class="listaFooter">
+						<i class="fa-brands fa-instagram"></i>
+						<a href="https://www.instagram.com/" target="_blank">Instagram</a>
+					</li>
+					<li class="listaFooter">
+						<i class="fa-brands fa-x-twitter"></i>
+						<a href="https://twitter.com/" target="_blank">Twitter</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="contenedorLogo">
+				<a href="/"><img src="../img/logo.png"></a>
+			</div>
+
+			<div class="copy-footer">
+				<p>Copyright © 2024 Trekking bags - Todos los derechos reservados</p>
+				<div class="contenedor-cosas">
+					<a href="./acerca-de-nosotros.html">Acerca de nosotros</a>
+					<a href="./error404.html">Contactanos</a>
+				</div>
+			</div>
+		</footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../jsRegistro/login.js"></script>
+    <script src="../js/pag-principal.js"></script>
+  </body>
+</html>

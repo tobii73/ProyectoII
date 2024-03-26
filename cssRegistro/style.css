@@ -1,9 +1,30 @@
  .btn{
     font-family: 'Encode Sans Semi Expanded', sans-serif !important;
  }
- body{
-    font-family: 'Encode Sans Semi Expanded', sans-serif;
- }
+ /* body{ */
+    /* font-family: 'Encode Sans Semi Expanded', sans-serif; */
+ /* } */
+
+ body {
+    /* background-image: url("https://wallpapercave.com/wp/wp2508260.jpg"); */
+    background-image: url("../imgRegistro/fondonegro.jpg");
+    background-size: cover; /* Para que la imagen se ajuste al tamaño de la ventana */
+    background-position: center; /* Para centrar la imagen */
+    height: 100vh; /* Para que la imagen ocupe toda la altura de la ventana */
+    color: goldenrod; /* Esto establece el color del texto a blanco para todos los elementos */
+    background-attachment: fixed;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    padding: 50px;
+    /* body { */
+        /* background-image: url(""../img/fondonegro.jpg"); */
+        /* background-size: cover; */
+        /* background-position: center; */
+        /* background-attachment: fixed; */
+        /* font-family: "Poppins", sans-serif; */
+        /* text-align: center; */
+        /* padding: 50px; */
+    }
  #texto_logo{
     color: ghostwhite;
 }
@@ -39,8 +60,13 @@
 .img_close{
     width: 32px;
 }
-.text-blue{
-    color: rgb(11, 105, 245);
+/* .text-blue{ */
+    /* color: rgb(11, 105, 245); */
+/* } */
+.btn-golden {
+    background-color: goldenrod;
+    border-color: goldenrod;
+
 }
 .icon-input{
     width: 16px;
@@ -59,5 +85,60 @@ audio{
     padding: 1px !important;
     margin: 1px !important;
     border-radius: 4px !important;
-   
+}
+  #btn_continuar {
+    background-color: goldenrod; /* Cambia este color al que desees */
+  }
+  .text-blue {
+    color: goldenrod; /* Cambia este color al que desees */
+    .btn-azul {
+    background-color: blue;
+    border-color: blue;
+}
+  }
+  #btn_inicio_sesion {
+    background-color: goldenrod; /* Cambia este color al que desees */
+  }
+  .form-control {
+    border-radius: 5px; /* Puedes ajustar este valor para redondear más o menos las esquinas */
+  }
+
+  #alerta_bienvenido {
+color: goldenrod; /* Cambia 'blue' al color deseado */
+}
+#error_name {
+color: goldenrod; /* Cambia 'goldenrod' al color deseado */
+
+}
+#error_pass {
+color: goldenrod; /* Cambia 'goldenrod' al color deseado */
+
+}
+#error_mail {
+color: goldenrod; /* Cambia 'goldenrod' al color deseado */
+
+}
+#error_pass_confir {
+color: goldenrod; /* Cambia 'goldenrod' al color deseado */
+
+}
+#error_terminos {
+color: goldenrod; /* Cambia 'goldenrod' al color deseado */
+
+}
+
+    
+h1 {
+    color: goldenrod; /* Color rojo para el título */
+}
+p {
+    color: goldenrod; /* Color gris oscuro para el texto */
+}
+a {
+    color: goldenrod; /* Cambiar el color del enlace a amarillo */
+}
+.error-img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
 }

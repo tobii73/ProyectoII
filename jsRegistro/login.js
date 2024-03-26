@@ -14,33 +14,49 @@ function loginUsuario(e) {
 	//expresion regular para validar email
 	const validarEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 	const resultadoValidacion = validarEmail.test(email);
+	let usuarioAdmin = false;
+    let loginSuccess = false;
 
 	//validaciones aca
 	if (!resultadoValidacion) {
-		console.log('no es un email valido');
+		console.log('Lo siento! no es un mail valido');
 	} //sigan con todas las que faltan
 
 	//una vez pasada las validaciones
 	const usuarioVerificado = usuariosRegistrados.find(function (usuario) {
+		// usuario.admin = true;
+		usuarioAdmin = usuario.admin;
 		return usuario.email === email;
 	});
 
 	if (usuarioVerificado == undefined || usuarioVerificado.password !== password) {
+
 		Swal.fire({
 			icon: 'error',
-			title: 'Oops...',
+			title: 'Lo siento !',
 			text: 'El Email o contraseña es incorrecto!',
+			confirmButtonColor: 'orange',
 		});
 		return;
+		
 	}
+	else {
+		
+		loginSuccess = true;
+	}
+	
+	if (loginSuccess) {
+		// Redirigir al usuario a index.html
+		
+		if (!usuarioAdmin) { window.location.href = "../index.html"; /* AQUI DEBEN PONER EL NOMBRE DE LA PAGINA PARA LA COMPRA DE PRODUCTOS*/ 
+		}		
 
-	Swal.fire({
-		position: 'center',
-		icon: 'success',
-		title: 'Usuario Logueado Correctamente',
-		showConfirmButton: false,
-		timer: 1500,
-	});
+		else{ window.location.href = "../pages/admin.html"; /*AQUI VA LA PAGINA DE ADMINISTRACION* */
 
-	validarRegistro.reset();
+		}
+	} 
+	validarLogin.reset();
+
+
 }
+
