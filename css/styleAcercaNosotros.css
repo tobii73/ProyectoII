@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url(../img/wp2508260.webp);
+    background-image: url(../img/fondoPag.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -31,6 +31,29 @@ body {
         border-radius: 20px;
         border-top: 1px solid orange;
         border-bottom: 1px solid orange;
+        color: white;
+    }
+    .fraseEquipoCont {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .fraseEquipo {
+        font-size: 24px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: italic;
+        padding: 25px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 90vw;
+        height: max-content;
+        text-align: center;
+        border-radius: 20px;
+        border-top: 2px solid orange;
+        border-bottom: 2px solid orange;
         color: white;
     }
 
