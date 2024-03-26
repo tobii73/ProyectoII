@@ -1,0 +1,173 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    background-image: url(../img/wp2508260.webp);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: "Poppins", sans-serif;
+}
+
+@media (min-width: 360px) {
+    .frase-equipo1 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .frase-equipo {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-style: italic;
+        padding: 25px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 90vw;
+        height: max-content;
+        text-align: center;
+        border-radius: 20px;
+        border-top: 1px solid orange;
+        border-bottom: 1px solid orange;
+        color: white;
+    }
+
+    .fraseEquipoCont {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .fraseEquipo {
+        font-size: 24px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: italic;
+        padding: 25px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 90vw;
+        height: max-content;
+        text-align: center;
+        border-radius: 20px;
+        border-top: 2px solid orange;
+        border-bottom: 2px solid orange;
+        color: white;
+    }
+
+    #acerca-nosotros {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-perfil {
+        width: 95vw;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        border-left: 2px solid orange;
+        border-right: 2px solid orange;
+        border-radius: 10%;
+    }
+
+    .card-perfil picture {
+        display: flex;
+        justify-content: center;
+    }
+
+    .card-perfil img {
+        height: 300px;
+        border-radius: 25%;
+        box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5);
+    }
+
+    .datos-perfil {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-perfil h2 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        text-align: center;
+        margin-top: 15px;
+        color: white;
+    }
+
+    .card-perfil p {
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        font-style: italic;
+        text-align: center;
+        text-decoration: none;
+        margin-top: 15px;
+        color: white;
+    }
+
+    .botones-card-perfil {
+        height: 75px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .botones-card-perfil a {
+        background-color: transparent;
+        font-size: 38px;
+        height: 70px;
+        padding: 15px;
+        border-radius: 50%;
+        color: white;
+    }
+
+    .botones-card-perfil a:hover {
+        color: orange;
+    }
+}
+
+@media (min-width: 768px) {
+    .frase-equipo {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    #acerca-nosotros {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .card-perfil {
+        max-width: 30vw;
+        border-left: 1px solid orange;
+        border-right: 1px solid orange;
+    }
+
+    .card-perfil picture {
+        height: 250px;
+    }
+
+    .card-perfil img {
+        height: 200px;
+    }
+
+    .card-perfil h2 {
+        height: 75px;
+    }
+
+    .card-perfil p {
+        height: 75px;
+        text-wrap: wrap;
+    }
+
+    .botones-card-perfil {
+        margin-top: 0px;
+    }
+}
