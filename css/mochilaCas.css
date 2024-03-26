@@ -31,7 +31,6 @@ p {
 }
 
 .precio {
-	text-decoration: line-through;
 	color: rgb(255, 255, 255);
 }
 .oferta {
